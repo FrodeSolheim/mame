@@ -47,19 +47,19 @@ srcdir = fsbuild/_build/mame-src
 all: build mame${exe}
 
 build:
-	cd ${srcdir} && make \
-                ARCHOPTS="$(archopts)" \
-                MINGW32=$(mingw32) \
-                MINGW64=$(mingw64) \
-                NOWERROR=1 \
+	cd ${srcdir} && make -j2 \
+		ARCHOPTS="$(archopts)" \
+		MINGW32=$(mingw32) \
+		MINGW64=$(mingw64) \
+		NOWERROR=1 \
 		OPTIMIZE=2 \
-                OSD=sdl \
-                PREFIX="" \
-                PTR64=$(ptr64) \
-                TARGET=mame \
-                USE_LIBSDL=1 \
-                USE_QTDEBUG=0 \
-                VERBOSE=1
+		OSD=sdl \
+		PREFIX="" \
+		PTR64=$(ptr64) \
+		TARGET=mame \
+		USE_LIBSDL=1 \
+		USE_QTDEBUG=0 \
+		VERBOSE=1
 
 mame${exe}: ${srcdir}/$(sdl)mame$(exe)
 	cp ${srcdir}/$(sdl)mame$(exe) mame${exe}

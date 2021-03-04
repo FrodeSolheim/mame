@@ -52,7 +52,6 @@ build:
 		MINGW32=$(mingw32) \
 		MINGW64=$(mingw64) \
 		NOWERROR=1 \
-		OPTIMIZE=2 \
 		OSD=sdl \
 		PREFIX="" \
 		PTR64=$(ptr64) \

@@ -1,3 +1,5 @@
 /cfg
+/*.dll
+.DS_Store
 /lib*.so*
 /mame*

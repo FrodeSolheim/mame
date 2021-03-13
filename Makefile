@@ -55,7 +55,6 @@ build:
 		OSD=sdl \
 		PREFIX="" \
 		PTR64=$(ptr64) \
-		SUBTARGET=arcade \
 		TARGET=mame \
 		USE_LIBSDL=1 \
 		USE_QTDEBUG=0 \

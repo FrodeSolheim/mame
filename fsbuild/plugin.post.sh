@@ -7,7 +7,9 @@ echo "Skip appify"
 elif [ -d "$PLUGIN_BINDIR/$PACKAGE_NAME_PRETTY.app" ]; then
 echo "App bundle already exists"
 else
+if [ "$EXECUTABLE" = "" ]; then
 EXECUTABLE=$PACKAGE_NAME
+fi
 sh fsbuild/appify.sh $PLUGIN_BINDIR $PACKAGE_NAME_PRETTY \
 $EXECUTABLE $PACKAGE_MACOS_BUNDLE_ID
 fi

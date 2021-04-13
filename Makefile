@@ -56,7 +56,7 @@ build:
 		MINGW64=$(mingw64) \
 		NOWERROR=1 \
 		OSD=sdl \
-		OVERRIDE_AR=$(override_ar)
+		OVERRIDE_AR=$(override_ar) \
 		PREFIX="" \
 		PTR64=$(ptr64) \
 		TARGET=mame \

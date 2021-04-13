@@ -21,9 +21,12 @@ mame64 = 1
 mingw32 =
 mingw64 =
 archopts =
+override_ar =
 
 ifeq ($(os), Windows)
 sdl = sdl
+archopts = -fuse-ld=lld
+override_ar = llvm-ar
 ifeq ($(arch), x86)
 mingw32 = /mingw32
 else
@@ -53,6 +56,7 @@ build:
 		MINGW64=$(mingw64) \
 		NOWERROR=1 \
 		OSD=sdl \
+		OVERRIDE_AR=$(override_ar)
 		PREFIX="" \
 		PTR64=$(ptr64) \
 		TARGET=mame \

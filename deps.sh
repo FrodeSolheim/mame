@@ -2,5 +2,6 @@
 
 set -e
 
-fsdeps/dep/SDL2
-fsdeps/dep/SDL2_ttf
+fsdeps/packages/fontconfig
+fsdeps/packages/SDL2
+fsdeps/packages/SDL2_ttf

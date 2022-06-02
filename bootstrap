@@ -6,25 +6,21 @@ set -e
 rm -f dosbox
 rm -Rf fsbuild/_build
 
-echo "Downloading mame0229.tar.gz..."
-# URL=https://github.com/mamedev/mame/releases/download/mame0209/mame0209s.zip
-# URL=https://github.com/mamedev/mame/releases/download/mame0229/mame0229s.exe
-URL=https://github.com/mamedev/mame/archive/mame0229.tar.gz
-# SHA256=7041fed9b38949d6ded4cf01a7b1d266ba48e5447c348881cf44818050984fc4
-# SHA256=80faf4459aa29954a51a211d8e550f75d8cf030b4bf1271474c874c495aecc58
-SHA256=414921771ada0804a8c7f3540e33338e8495e16a3bca78a5a2b355abafa51e6a
+echo "Downloading mame0242.tar.gz..."
+URL="https://github.com/mamedev/mame/archive/mame0242.tar.gz"
+SHA256="36d35cf0a1d11e3b8bdabed44222e9910be2fb8954ea3579c2ba02576ed385c1"
 python3 fsbuild/download.py "$URL" sha256:$SHA256
 
-echo "Extracting mame0229.tar.gz..."
+echo "Extracting mame0242.tar.gz..."
 mkdir -p fsbuild/_build
 cd fsbuild/_build
 rm -Rf mame-src
-# unzip ../_sources/mame0229s.exe
-tar xf ../_sources/mame0229.tar.gz
+# unzip ../_sources/mame0242s.exe
+tar xf ../_sources/mame0242.tar.gz
 # mkdir mame-src
 # cd mame-src
 # unzip ../mame.zip
 # rm ../mame.zip
-mv mame-mame0229 mame-src
+mv mame-mame0242 mame-src
 
 echo "Bootstrap done"
